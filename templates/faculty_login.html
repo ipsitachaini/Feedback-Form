@@ -1,0 +1,78 @@
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Login Page</title>
+
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Faculty Login</h1>
+        <p>Please enter your Official Mail ID to continue</p>
+
+        <form action="/faculty_login" method="POST">
+            <div class="form-group">
+
+                
+                <label for="official-id">Official Email:</label>
+                <input type="text" id="official-id" name="email" required>
+
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <div class="button-container">
+                <button type="submit" class="button">Login</button>
+            </div>
+        </form>
+
+        <div class="navigation">
+            
+            <a href="/">Back to Student Login</a>
+        </div>
+    </div>
+</body>
+</html> -->
+
+<!-- FACULTY LOGIN PAGE -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Login</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Faculty Login</h1>
+        <p>Use your official GIET email to continue</p>
+
+        <form action="/faculty_login" method="POST">
+
+            <div class="form-group">
+                <label for="email">Faculty Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <div class="button-container">
+                <button type="submit" class="button">Login</button>
+            </div>
+
+        </form>
+
+        <div class="navigation">
+            <a href="/">Back to Student Login</a>
+        </div>
+    </div>
+</body>
+</html>

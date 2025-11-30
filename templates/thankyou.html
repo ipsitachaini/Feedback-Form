@@ -1,0 +1,30 @@
+<!-- END GREETING PAGE / CLOSING PAGE -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+
+    <!-- Correct Flask CSS Link -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Thank You!</h1>
+
+        <div class="success-message">
+            <h2>Your review has been submitted successfully!</h2>
+            <p>Thank you for providing valuable feedback. This helps improve the quality of education at GIET University.</p>
+
+            <p>Your feedback will be reviewed by the appropriate department and necessary actions will be taken.</p>
+        </div>
+
+        <div class="button-container">
+            <!-- Correct Flask route -->
+            <a href="/review" class="button">Submit Another Review</a>
+        </div>
+
+    </div>
+</body>
+</html>

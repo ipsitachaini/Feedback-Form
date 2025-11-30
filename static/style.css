@@ -1,0 +1,196 @@
+/*  CSS styling  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    background-image: url('https://www.giet.edu/');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #000000;
+    line-height: 1.5;
+    padding: 20px;
+}
+
+
+
+body.login-page.container{
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+body.login-page h1{
+    color: #2c3e50;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+body.login-page.button{
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+body.login-page.button:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.container{
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border: 1px solid #cccccc;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1{
+    color: #000000;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+h2{
+    color: #000000;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+p{
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+form{
+    text-align: left;
+    margin: 20px 0;
+}
+
+.form-group{
+    margin-bottom: 20px;
+}
+
+label{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #000000;
+}
+
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+    font-size: 14px;
+    color: #000000;
+}
+
+input[type="text"]:focus,
+select:focus,
+textarea:focus{
+    border-color: #0066cc;
+    outline: none;
+}
+
+textarea{
+    resize: vertical;
+    font-family: Arial, sans-serif;
+}
+
+.button{
+    background-color: #0066cc;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin: 5px;
+}
+
+.button:hover{
+    background-color: #0052a3;
+}
+
+.button-container{
+    text-align: center;
+    margin: 20px 0;
+}
+
+.navigation{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.navigation a{
+    color: #0066cc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.navigation a:hover{
+    text-decoration: underline;
+}
+
+.privacy-notice{
+    background-color: #f9f9f9;
+    border: 1px solid #dddddd;
+    padding: 15px;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.privacy-notice p{
+    margin: 0;
+    font-size: 12px;
+    color: #666666;
+}
+
+.success-message{
+    background-color: #e8f5e8;
+    border: 1px solid #c3e6c3;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.success-message h2{
+    color: #2d5a2d;
+    margin-bottom: 10px;
+}
+
+.success-message p{
+    color: #2d5a2d;
+    margin-bottom: 10px;
+}
+
+footer{
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #cccccc;
+    font-size: 12px;
+    color: #666666;
+}
+
+footer p{
+    margin-bottom: 5px;
+}

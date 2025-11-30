@@ -1,0 +1,132 @@
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Box</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Faculty Review Form</h1>
+        <p>Please provide your feedback about the faculty member</p>
+
+        
+        <form action="/submit_review" method="POST">
+
+            <div class="form-group">
+                <label for="faculty">Select Faculty</label>
+                <select id="faculty" name="faculty" required>
+                    <option value="">Select Faculty</option>
+                    <option value="Faculty 1">Faculty 1</option>
+                    <option value="Faculty 2">Faculty 2</option>
+                    <option value="Faculty 3">Faculty 3</option>
+                    <option value="Faculty 4">Faculty 4</option>
+                    <option value="Faculty 5">Faculty 5</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Subject:</label>
+                <select id="subject" name="subject" required>
+                    <option value="">Select Subject</option>
+                    <option value="Subject 1">Subject 1</option>
+                    <option value="Subject 2">Subject 2</option>
+                    <option value="Subject 3">Subject 3</option>
+                    <option value="Subject 4">Subject 4</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="review">Your Review/Feedback:</label>
+                <textarea id="review" name="suggestion" rows="6"
+                placeholder="Please share your detailed feedback..." required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="improvement">Suggestions for Improvement (Optional):</label>
+                <textarea id="improvement" name="improvement" rows="4"
+                placeholder="Any suggestions for improvement..."></textarea>
+            </div>
+
+            <div class="button-container">
+                <button type="submit" class="button">Submit Review</button>
+            </div>
+        </form>
+
+        <div class="navigation">
+            <a href="/studentinfo">Back to Student Info</a>
+        </div>
+    </div>
+</body>
+</html> -->
+
+<!-- REVIEW PAGE -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Box</title>
+
+    <!-- Correct Flask CSS path -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Faculty Review Form</h1>
+        <p>Please provide your feedback about the faculty member</p>
+
+        <form action="/submit_review" method="POST">
+
+            <div class="form-group">
+                <label for="faculty">Select Faculty</label>
+                <select id="faculty" name="faculty" required>
+                    <option value="">Select Faculty</option>
+
+                    <!-- UPDATED: actual faculty emails -->
+                    <option value="faculty1@giet.edu">Faculty 1</option>
+                    <option value="faculty2@giet.edu">Faculty 2</option>
+                    <option value="faculty3@giet.edu">Faculty 3</option>
+                    <option value="faculty4@giet.edu">Faculty 4</option>
+                    <option value="faculty5@giet.edu">Faculty 5</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Subject:</label>
+                <select id="subject" name="subject" required>
+                    <option value="">Select Subject</option>
+                    <option value="Subject 1">Subject 1</option>
+                    <option value="Subject 2">Subject 2</option>
+                    <option value="Subject 3">Subject 3</option>
+                    <option value="Subject 4">Subject 4</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="review">Your Review/Feedback:</label>
+                <textarea id="review" name="suggestion" rows="6"
+                placeholder="Please share your detailed feedback..." required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="improvement">Suggestions for Improvement (Optional):</label>
+                <textarea id="improvement" name="improvement" rows="4"
+                placeholder="Any suggestions for improvement..."></textarea>
+            </div>
+
+            <div class="button-container">
+                <button type="submit" class="button">Submit Review</button>
+            </div>
+
+        </form>
+
+        <div class="navigation">
+            <a href="/studentinfo">Back to Student Info</a>
+        </div>
+    </div>
+</body>
+</html>

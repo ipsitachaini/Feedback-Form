@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Reviews</title>
+
+    <!-- Correct Flask CSS link -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <style>
+        .review-container {
+            display: flex;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            min-height: 80vh; 
+        }
+
+        .sidebar {
+            width: 250px;
+            flex-shrink: 0;
+            padding: 30px;
+            background-color: #fad2d2;
+            border-right: 1px solid #00ee6b;
+            text-align: left;
+        }
+
+        .sidebar h2 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .main-content {
+            flex-grow: 1;
+            padding: 30px;
+            text-align: left;
+        }
+
+        .review-box {
+            background-color: #ececec;
+            border: 1px solid #d13232;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .review-box p {
+            margin-bottom: 10px;
+        }
+
+        .review-box p:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="review-container">
+    
+        <div class="sidebar">
+            <h2>Faculty Dashboard</h2>
+
+            <!-- Logout through backend -->
+            <a href="/logout" class="button">Logout</a>
+        </div>
+        
+        <div class="main-content">
+            <h1>Your Reviews</h1>
+
+            <div id="reviews">
+                <!-- Loop through all reviews -->
+                {% for r in reviews %}
+                <div class="review-box">
+                    <p><strong>Name:</strong> {{ r.name }}</p>
+                    <p><strong>Department:</strong> {{ r.department }}</p>
+                    <p><strong>Review:</strong> {{ r.suggestion }}</p>
+                </div>
+                {% endfor %}
+            </div>
+
+            {% if reviews|length == 0 %}
+                <p>No reviews submitted yet.</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

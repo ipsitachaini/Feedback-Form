@@ -1,0 +1,73 @@
+<!-- STUDENT INFORMATION PAGE -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information</title>
+
+    <!-- Correct CSS for Flask -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Information</h1>
+        <p>Please fill in your details below</p>
+
+        <div class="privacy-notice">
+            <p><strong>Privacy Notice:</strong> Your information will be kept confidential and used only for review purposes.</p>
+        </div>
+
+        <!-- SEND DATA TO /save_studentinfo -->
+        <form action="/save_studentinfo" method="POST">
+
+            <div class="form-group">
+                <label for="student-name">Full Name:</label>
+                <input type="text" id="student-name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="semester">Semester:</label>
+                <select id="semester" name="semester" required>
+                    <option value="">Select Semester</option>
+                    <option value="1">1st Semester</option>
+                    <option value="2">2nd Semester</option>
+                    <option value="3">3rd Semester</option>
+                    <option value="4">4th Semester</option>
+                    <option value="5">5th Semester</option>
+                    <option value="6">6th Semester</option>
+                    <option value="7">7th Semester</option>
+                    <option value="8">8th Semester</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="Branch">Branch:</label>
+                <select id="Branch" name="department" required>
+                    <option value="">Select Branch</option>
+                    <option value="CSE">CSE</option>
+                    <option value="AIML">AIML</option>
+                    <option value="DS">DS</option>
+                    <option value="ECE">ECE</option>
+                    <option value="MECHANICAL">MECHANICAL</option>
+                    <option value="AERONOTICAL">AERONOTICAL</option>
+                    <option value="CIVIL">CIVIL</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="roll-number">Roll Number:</label>
+                <input type="text" id="roll-number" name="roll" required>
+            </div>
+
+            <div class="button-container">
+                <button type="submit" class="button">Continue to Review</button>
+            </div>
+        </form>
+
+        <div class="navigation">
+            <a href="/">Back to Login</a>
+        </div>
+    </div>
+</body>
+</html>
